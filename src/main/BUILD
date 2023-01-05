@@ -34,3 +34,9 @@ cc_binary(
     srcs = ["usecase1.cpp"],
     deps = ["//src/lib:StrongUnit"],
 )
+
+cc_binary(
+    name = "usecase2",
+    srcs = ["usecase2.cpp"],
+    deps = ["//src/lib:StrongUnit"],
+)
