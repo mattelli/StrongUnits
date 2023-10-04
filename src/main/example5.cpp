@@ -17,7 +17,7 @@ using namespace stu::prefixes;
 using namespace stu::constants;
 
 /**
- *  Quantity and unit definitios only from headers
+ *  Quantity and unit definitions only from headers
  **/
 
 int main()

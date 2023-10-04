@@ -14,7 +14,7 @@ using namespace stu::literals;
 using namespace stu::symbols;
 
 /**
- *  Customized quantity and unit definitios without additional headers
+ *  Customized quantity and unit definitions without additional headers
  **/
 namespace stu
 {
@@ -24,14 +24,14 @@ namespace stu
     DEF_SCALE(kmph2mps, 1000U, 3600U)
 
     DEF_QUANTITY(Number) // each quantity is ideally defined by base numbers with rational exponents,
-                         // Nuber must be represented by (b0^0)*...*(b9^0)
+                         // Number must be represented by (b0^0)*...*(b9^0)
     DEF_UNIT(Number, number, float, _, unity)
 
-    DEF_QUANTITY(Time, std::ratio<1>) // Time can be represented by (b0^1)*(b1^0)*...*(b9^0), only the first ratio needs to be explicitated
+    DEF_QUANTITY(Time, std::ratio<1>) // Time can be represented by (b0^1)*(b1^0)*...*(b9^0), only the first ratio needs to be inputted
     DEF_UNIT(Time, second, float, _s, unity)
     DEF_UNIT(Time, minute, float, _min, s2min)
 
-    DEF_QUANTITY(Length, std::ratio<0>, std::ratio<1>) // Length can be represented by (b0^0)*(b1^1)*(b2^0)*...*(b9^0), only the first two ratios need to be explicitated
+    DEF_QUANTITY(Length, std::ratio<0>, std::ratio<1>) // Length can be represented by (b0^0)*(b1^1)*(b2^0)*...*(b9^0), only the first two ratios need to be inputted
     DEF_UNIT(Length, meter, float, _m, unity)
     DEF_UNIT(Length, kilometer, float, _km, kilo)
 
@@ -46,8 +46,8 @@ namespace stu
 const auto gravityAcceleration = 9.81_mps2; // using literals
 const float greek_pi = 3.14159;
 
-stu::second getPendulumPeriod_std(const stu::meter &length); // computes simple pendolum period using std math function
-stu::second getPendulumPeriod_stu(const stu::meter &length); // computes simple pendolum period using stu math function
+stu::second getPendulumPeriod_std(const stu::meter &length); // computes simple pendulum period using std math function
+stu::second getPendulumPeriod_stu(const stu::meter &length); // computes simple pendulum period using stu math function
 
 void computeVelocityExample()
 {

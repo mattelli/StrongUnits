@@ -32,7 +32,7 @@ namespace stu
     DEF_UNIT(Velocity, meter_per_second, STU_UNIT_TYPE, _mps, unity)
 }
 
-/*///Unallowed wrapped types
+/*///Not allowed wrapped types
 template class stu::CUnit<float>;
 template class stu::CUnit<double>;
 template class stu::CUnit<long double>;

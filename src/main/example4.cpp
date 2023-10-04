@@ -16,7 +16,7 @@ using namespace stu::symbols;
 using namespace stu::prefixes;
 
 /**
- *  Quantity and unit definitios only from headers
+ *  Quantity and unit definitions only from headers
  **/
 
 void computeImpedence()

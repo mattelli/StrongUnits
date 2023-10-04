@@ -14,7 +14,7 @@ using namespace stu::symbols;
 using namespace stu::prefixes;
 
 /**
- *  Quantity and unit definitios only from SIDerivedUnits header
+ *  Quantity and unit definitions only from SIDerivedUnits header
  **/
 int main()
 {
@@ -41,7 +41,7 @@ int main()
     std::cout << "\n a*a*a = ";
     aaa.print();
 
-    auto f = 2.5 / (M_*_s); // usege of prefix mega allows automatic scale conversion 
+    auto f = 2.5 / (M_*_s); // usage of prefix mega allows automatic scale conversion 
     std::cout << "\n f = ";
     f.print();
 
@@ -50,7 +50,7 @@ int main()
     std::cout << "\n celsius t = ";
     g.print();
 
-    auto akilogram = k_*_g ; // usege of prefix kilo allows automatic scale conversion
+    auto akilogram = k_*_g ; // usage of prefix kilo allows automatic scale conversion
     std::cout << "\n a kg = ";
     akilogram.print();
 }
