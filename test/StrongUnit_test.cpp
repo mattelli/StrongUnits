@@ -160,23 +160,23 @@ TEST(StrongUnit, Subtraction_conversion_three_length)
 TEST(StrongUnit, Prefix_increment_decrement)
 {
     stu::meter a = 1.0_m;
-    stu::meter b = ++a;
-    EXPECT_EQ(b, a);
+    EXPECT_EQ(++a, 2.0_m);
+    EXPECT_EQ(a, 2.0_m);
 
-    auto s = 1.0_s;
-    auto w = --s;
-    EXPECT_EQ(w, s);
+    auto s = 2.0_s;
+    EXPECT_EQ(--s, 1.0_s);
+    EXPECT_EQ(s, 1.0_s);
 }
 
 TEST(StrongUnit, Postfix_increment_decrement)
 {
     stu::meter a = 1.0_m;
-    stu::meter b = a++;
-    EXPECT_EQ((b + 1.0_m), a);
+    EXPECT_EQ(a++, 1.0_m);
+    EXPECT_EQ(a, 2.0_m);
 
-    auto s = 1.0_s;
-    auto w = s--;
-    EXPECT_EQ((w - 1.0_s), s);
+    auto s = 2.0_s;
+    EXPECT_EQ(s--, 2.0_s);
+    EXPECT_EQ(s, 1.0_s);
 }
 
 TEST(StrongUnit, Comparision_operators)

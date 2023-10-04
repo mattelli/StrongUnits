@@ -49,7 +49,7 @@ namespace stu
 {
     /**
      * @brief
-     * Namespace in which strong unit literals are defefined (labels format is identical).
+     * Namespace in which strong unit literals are defined (labels format is identical).
      */
     namespace literals
     {
@@ -65,7 +65,7 @@ namespace stu
 
     /**
      * @brief
-     * Namespace in which strong unit prefixes are defefined (prefixes are numeral units constants).
+     * Namespace in which strong unit prefixes are defined (prefixes are numeral units constants).
      */
     namespace prefixes
     {
@@ -160,8 +160,8 @@ namespace stu
         template <std::uintmax_t UP, std::uintmax_t DN>
         struct ScaleBase
         {
-            static_assert((UP > 0 && UP <= UINTMAX_MAX), "==>> UNVALID SCALE UP! <<==");
-            static_assert((DN > 0 && DN <= UINTMAX_MAX), "==>> UNVALID SCALE DN! <<==");
+            static_assert((UP > 0 && UP <= UINTMAX_MAX), "==>> INVALID SCALE UP! <<==");
+            static_assert((DN > 0 && DN <= UINTMAX_MAX), "==>> INVALID SCALE DN! <<==");
             static constexpr std::uintmax_t up_ = UP;
             static constexpr std::uintmax_t dn_ = DN;
         };
@@ -373,7 +373,7 @@ namespace stu
         // prefix increment
         Unit &operator++()
         {
-            value_++;
+            ++value_;
             return *this;
         }
 
@@ -388,7 +388,7 @@ namespace stu
         // prefix decrement
         Unit &operator--()
         {
-            value_--;
+            --value_;
             return *this;
         }
 
@@ -787,7 +787,7 @@ namespace stu
     {
         constexpr auto sc_up{utils::isqrt(SC::up_)};
         constexpr auto sc_dn{utils::isqrt(SC::dn_)};
-        static_assert(sc_up > 0 && sc_dn > 0, "==>> UNVALID SCALE! <<==");
+        static_assert(sc_up > 0 && sc_dn > 0, "==>> INVALID SCALE! <<==");
 
         struct combined_label
         {

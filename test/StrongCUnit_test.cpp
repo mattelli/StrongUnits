@@ -204,25 +204,23 @@ TEST(StrongCUnit, Subtraction_conversion_three_length)
 TEST(StrongCUnit, Prefix_increment_decrement)
 {
     stu::CUnit<stu::meter> a{1.0_m, 1.0_m};
-    auto b = ++a;
-    EXPECT_EQ(b, a);
+    EXPECT_EQ(++a, (stu::CUnit<stu::meter>{2.0_m, 2.0_m}));
+    EXPECT_EQ(a, (stu::CUnit<stu::meter>{2.0_m, 2.0_m}));
 
-    stu::CUnit<stu::second> s{1.0_s};
-    auto w = --s;
-    EXPECT_EQ(w, s);
+    stu::CUnit<stu::second> s{2.0_s, 2.0_s};
+    EXPECT_EQ(--s,(stu::CUnit<stu::second>{1.0_s, 1.0_s}));
+    EXPECT_EQ(s, (stu::CUnit<stu::second>{1.0_s, 1.0_s}));
 }
 
 TEST(StrongCUnit, Postfix_increment_decrement)
 {
-    stu::CUnit<stu::meter> a{5.0_m, 5.0_m};
-    stu::CUnit<stu::meter> one_m{1.0_m, 1.0_m};
-    auto b = a++;
-    EXPECT_EQ((b + one_m), a);
+    stu::CUnit<stu::meter> a{1.0_m, 1.0_m};
+    EXPECT_EQ(a++, (stu::CUnit<stu::meter>{1.0_m, 1.0_m}));
+    EXPECT_EQ(a, (stu::CUnit<stu::meter>{2.0_m, 2.0_m}));
 
-    stu::CUnit<stu::second> s{5.0_s};
-    stu::CUnit<stu::second> one_s{1.0_s, 1.0_s};
-    auto w = s--;
-    EXPECT_EQ((w - one_s), s);
+    stu::CUnit<stu::second> s{2.0_s, 2.0_s};
+    EXPECT_EQ(s--, (stu::CUnit<stu::second>{2.0_s, 2.0_s}));
+    EXPECT_EQ(s, (stu::CUnit<stu::second>{1.0_s, 1.0_s}));
 }
 
 TEST(StrongCUnit, Comparision_operators)

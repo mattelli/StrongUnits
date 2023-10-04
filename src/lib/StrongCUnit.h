@@ -121,8 +121,8 @@ namespace stu
         // prefix increment
         CUnit &operator++()
         {
-            real_++;
-            imag_++;
+            ++real_;
+            ++imag_++;
             return *this;
         }
 
@@ -137,8 +137,8 @@ namespace stu
         // prefix decrement
         CUnit &operator--()
         {
-            real_--;
-            imag_--;
+            --real_;
+            --imag_;
             return *this;
         }
 
